@@ -1,6 +1,8 @@
+using homework3_4.Interfaces;
+using System;
+
 namespace homework3_4.Classes
 {
-    using homework3_4.Interfaces;   
     class ProvideValueBool:IValueProvider<bool>
     {
         public bool GetRandomValue()
@@ -15,6 +17,12 @@ namespace homework3_4.Classes
             {
                 return false;
             }
+        }
+
+        public bool GetUserValue()
+        {
+            bool UserValue = bool.Parse(Console.ReadLine());
+            return UserValue;
         }
     }
 }
