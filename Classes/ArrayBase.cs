@@ -1,21 +1,23 @@
+using homework3_4.Interfaces;
+using System;
+
 namespace homework3_4.Classes
 {
-    using homework3_4.Interfaces;
     abstract class ArrayBase:IBaseArray
     {
-        public abstract void CreateArray();
+        public abstract void RandomFill();
         
-        public abstract void UserChoise();
+        public abstract void UserFill();
         
         public virtual void ReCreateArray(bool random = false)
         {
             if (!random)
             { 
-                CreateArray();
+                RandomFill();
             }
             else
             {
-                UserChoise();
+                UserFill();
             }
         }
     }
