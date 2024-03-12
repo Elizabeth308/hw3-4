@@ -1,6 +1,8 @@
+using homework3_4.Interfaces;
+using System;
+
 namespace homework3_4.Classes
 {
-    using homework3_4.Interfaces;
     class ProvideValueString:IValueProvider<string>
     {
         public string GetRandomValue()
@@ -14,6 +16,12 @@ namespace homework3_4.Classes
                 array1[i] = CharArray[number];
             }
             return new string(array1);
+        }
+
+        public string GetUserValue()
+        {
+            string UserString = Console.ReadLine();
+            return UserString;
         }
     }
 }
